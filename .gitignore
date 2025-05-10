@@ -1,0 +1,53 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Environment files
+.env
+.venv/
+env/
+venv/
+*.env
+
+# Python cache and logs
+*.log
+*.pot
+*.pyc
+*.pyo
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# VSCode and IDE config
+.vscode/
+.idea/
+
+# Model checkpoints, datasets, large files
+checkpoints/
+*.pt
+*.bin
+*.ckpt
+*.pth
+*.h5
+tokenized_data/
+*.jsonl
+*.npz
+
+# Output directories
+results/
+outputs/
+runs/
+wandb/
+
+# Package-related
+build/
+dist/
+*.egg-info/
+
+# Colab or notebook-specific
+*.nbconvert.ipynb
