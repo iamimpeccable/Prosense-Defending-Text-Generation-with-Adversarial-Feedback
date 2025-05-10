@@ -1,0 +1,11 @@
+transformers>=4.37.0
+datasets>=2.16.0
+accelerate>=0.24.0
+bitsandbytes>=0.42.0
+unsloth>=0.0.9
+textattack>=0.3.8
+torch>=2.1.0
+scikit-learn
+tqdm
+numpy
+matplotlib
