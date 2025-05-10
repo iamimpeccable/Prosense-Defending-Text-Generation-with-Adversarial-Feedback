@@ -1,6 +1,6 @@
 # 🧠 ProSense: Defending Text Generation with Adversarial Feedback
 
-![ProSense Cycle](assets/ProSense Cycle.png)
+![ProSense Diagram](assets/ProSenseCycle.png)
 
 
 > A multi-stage framework to enhance LLMs' truthfulness and adversarial resilience using Graph-of-Thought reasoning and structured fine-tuning.
