@@ -1,6 +1,9 @@
 # 🧠 ProSense: Defending Text Generation with Adversarial Feedback
 
-> A multi-stage framework to enhance the truthfulness and adversarial resilience of LLMs using Graph-of-Thought reasoning and structured fine-tuning.
+![ProSense Solid](assets/ProSense_Solid.png)
+
+
+> A multi-stage framework to enhance LLMs' truthfulness and adversarial resilience using Graph-of-Thought reasoning and structured fine-tuning.
 
 ---
 
