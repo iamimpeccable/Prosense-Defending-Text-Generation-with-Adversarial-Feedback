@@ -1,28 +1,30 @@
-# Prosense-Defending-Text-Generation-with-Adversarial-Feedback
-ProSense is a multi-stage training framework that boosts LLM truthfulness and robustness using Graph-of-Thought reasoning, adversarial feedback loops, and quantized fine-tuning on Mistral-7 B. It identifies logical failures and re-trains models through structured error correction.
+# 🧠 ProSense: Defending Text Generation with Adversarial Feedback
 
-🚀 Overview
-ProSense is a robust adversarial defense framework for LLMs. It is built to identify and correct logical failures in model generations through structured, multi-phase training. By integrating Graph-of-Thought (GoT) reasoning graphs and adversarial feedback loops, ProSense performs progressive fine-tuning that significantly boosts truthfulness and robustness.
+> A multi-stage framework to enhance the truthfulness and adversarial resilience of LLMs using Graph-of-Thought reasoning and structured fine-tuning.
 
-The pipeline is efficient, reproducible on a single A100/H100 GPU, and utilizes a 4-bit quantized Mistral-7B model with adversarial and hybrid datasets, including performance benchmarking via TruthfulQA.
+---
 
-🌟 Key Features
-🔁 Multi-Stage Curriculum Fine-Tuning
-Clean, hybrid, and GoT-tagged data progressively refine model reasoning.
+## 🚀 Overview
 
-⚔️ Adversarial Feedback Loop
-Judging and parsing flawed outputs into adversarial reasoning graphs for targeted re-training.
+**ProSense** is a robust, multi-stage training framework designed to improve the truthfulness and adversarial resilience of large language models (LLMs). It leverages structured feedback in the form of Graph-of-Thought (GoT) reasoning graphs to identify and refine logical failures in model generations across curriculum-based fine-tuning cycles.
 
-🧩 Graph-of-Thought Parsing
-Model failures are converted into logical trees, enabling structured learning from errors.
+Built on a 4-bit quantized **Mistral-7B** model, ProSense incorporates adversarially generated training data and structured reasoning evaluation using **TruthfulQA**, **LLaMA**, and custom parsing logic. Training is optimized for cost-effective reproducibility on a single **A100 or H100 GPU** using **RunPod**.
 
-📊 TruthfulQA Benchmarking
-Real-world adversarial evaluation to measure truthfulness improvement.
+---
 
-⚙️ GPU-Efficient Setup
-All training runs are reproducible on a single 24 GB+ GPU using 4-bit quantized models and Unsloth.
+## 🌟 Key Features
 
+- 🔁 **Multi-Stage Fine-Tuning:** Clean, hybrid, and GoT-tagged data progressively refine model reasoning.
+- ⚔️ **Adversarial Feedback Loop:** Parses and judges flawed generations to feed adversarial reasoning graphs back into training.
+- 🧩 **Graph-of-Thought Parsing:** Converts flawed outputs into structured logical error paths.
+- 📊 **TruthfulQA Benchmarking:** Performance evaluation using adversarial QA tasks.
+- ⚙️ **GPU-Efficient Setup:** Training with 4-bit quantization on single-GPU systems.
 
+---
+
+## 📁 Project Structure
+
+```plaintext
 Prosense-Adversarial-Robustness/
 ├── Phase1_Clean_FineTuning/
 │   └── phase1.ipynb
@@ -42,5 +44,3 @@ Prosense-Adversarial-Robustness/
     ├── Phase4_4_Collect_Level2_Responses.ipynb
     ├── Phase4_5_Judge_Level2_Responses.ipynb
     └── Phase4_6_Reasoning_Graph_Visualization.ipynb
-
-
