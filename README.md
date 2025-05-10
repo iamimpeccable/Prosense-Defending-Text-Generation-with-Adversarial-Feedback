@@ -50,55 +50,99 @@ Prosense-Adversarial-Robustness/
 ```
 ---
 
+Absolutely! Here is a **perfectly formatted Markdown block** for the sections you mentioned. You can **copy-paste it directly** into your `README.md` after the Project Structure section:
+
+---
+
+````markdown
 ## ⚙️ Installation
+
+```bash
 git clone https://github.com/AnuBaluguri/Prosense_Defending_Text_Generation_with_Adversarial_Feedback.git
 cd Prosense_Defending_Text_Generation_with_Adversarial_Feedback
 pip install -r requirements.txt
+````
 
-Requires Python 3.10+ and a 24GB+ GPU (A100/H100 recommended) for full training runs.
+> Requires **Python 3.10+** and a **24GB+ GPU** (A100/H100 recommended) for full training runs.
 
 ---
 
 ## ▶️ Usage
-Execute the following notebooks in order:
 
-Phase 1: Clean Fine-Tuning
-phase1.ipynb
+Execute the following notebooks in order to run the full training and feedback pipeline:
 
-Phase 2: Adversarial Dataset & Hybrid Training
-HybridDataCreation.ipynb
+### Phase 1: Clean Fine-Tuning
 
-MergingWithHybridDataset.ipynb
+* `Phase1_Clean_FineTuning/phase1.ipynb`
 
-Phase2_Final.ipynb
+### Phase 2: Hybrid Dataset & Adversarial Training
 
-Phase 3: Evaluation + GoT Feedback
-Phase3_1_Collect_TruthfulQA_Responses.ipynb
+* `HybridDataCreation.ipynb`
+* `MergingWithHybridDataset.ipynb`
+* `Phase2_Final.ipynb`
 
-Phase3_2_Judge_and_Filter_Failures.ipynb
+### Phase 3: GoT Feedback Evaluation
 
-Phase3_3_Parse_GOT_Graph_By_LLaMA.ipynb
+* `Phase3_1_Collect_TruthfulQA_Responses.ipynb`
+* `Phase3_2_Judge_and_Filter_Failures.ipynb`
+* `Phase3_3_Parse_GOT_Graph_By_LLaMA.ipynb`
+* `Phase3_Final.ipynb`
 
-Phase3_Final.ipynb
+### Phase 4: Second-Level Reasoning Refinement
 
-Phase 4: Second-Level Feedback & Finalization
-Phase4_1_Collect_Level1_Responses.ipynb
-
-Phase4_2_Judge_Parse_Level1_By_LLaMA.ipynb
-
-Phase4_3_Level2_Finetune.ipynb
-
-Phase4_4_Collect_Level2_Responses.ipynb
-
-Phase4_5_Judge_Level2_Responses.ipynb
-
-Phase4_6_Reasoning_Graph_Visualization.ipynb
+* `Phase4_1_Collect_Level1_Responses.ipynb`
+* `Phase4_2_Judge_Parse_Level1_By_LLaMA.ipynb`
+* `Phase4_3_Level2_Finetune.ipynb`
+* `Phase4_4_Collect_Level2_Responses.ipynb`
+* `Phase4_5_Judge_Level2_Responses.ipynb`
+* `Phase4_6_Reasoning_Graph_Visualization.ipynb`
 
 ---
 
-## ⭐ Advanced Features
-Graph-of-Thought Analysis: Each failure is parsed into a reasoning tree for precise re-training.
+## 🧠 Advanced Features
 
-Curriculum Feedback Loop: Two rounds of adversarial feedback with increasing structure and complexity.
+* **Graph-of-Thought Parsing:** Converts flawed outputs into structured logical reasoning trees.
+* **Curriculum Feedback Loop:** Two rounds of adversarial fine-tuning with increasing structure and depth.
+* **Inference-Ready Checkpoints:** Final tuned model weights and tokenized datasets (excluded from this repo).
 
-Inference-Ready Checkpoints: Includes final weights and tokenized datasets.
+---
+
+## 📈 Results
+
+![Graph-of-Thought Visualization](assets/ProSense_GoT_Visualization.png)
+
+| Metric                     | Before   | After Phase 3 | Change   |
+| -------------------------- | -------- | ------------- | -------- |
+| **TruthfulQA Pass Rate**   | 35%      | 55%           | +20%     |
+| **Adversarial Robustness** | Baseline | Improved      | **+30%** |
+
+> *GoT visualizations highlight logical gaps, contradictions, and inference failures.*
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions!
+
+To propose a fix or feature:
+
+1. Fork the repository
+2. Create a new branch
+3. Submit a pull request with a clear explanation
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License**. See the `LICENSE` file for details.
+
+---
+
+## 🙏 Acknowledgments
+
+* 🐍 [Unsloth](https://github.com/unslothai/unsloth) – Quantized fine-tuning tools
+* 🦙 [Meta](https://ai.meta.com/research/publications/) – LLaMA 3 models
+* 🤗 [Hugging Face](https://huggingface.co) – Datasets (Open-Instruct, TruthfulQA)
+* ⚡ [RunPod](https://runpod.io) – GPU compute support
+
+---
