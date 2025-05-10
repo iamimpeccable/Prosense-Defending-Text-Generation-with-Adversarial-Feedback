@@ -109,7 +109,7 @@ Execute the following notebooks in order to run the full training and feedback p
 
 ## 📈 Results
 
-![Graph-of-Thought Visualization](assets/ProSense_GoT_Visualization.png)
+![Graph-of-Thought Visualization](assets/GOT_Result.png)
 
 | Metric                     | Before   | After Phase 3 | Change   |
 | -------------------------- | -------- | ------------- | -------- |
