@@ -54,14 +54,14 @@ Absolutely! Here is a **perfectly formatted Markdown block** for the sections yo
 
 ---
 
-````markdown
-## ⚙️ Installation
+## Installation
 
+1. Clone Repository and Install Dependencies
 ```bash
-git clone https://github.com/AnuBaluguri/Prosense_Defending_Text_Generation_with_Adversarial_Feedback.git
+git clone https://github.com/iamimpeccable/Prosense_Defending_Text_Generation_with_Adversarial_Feedback.git
 cd Prosense_Defending_Text_Generation_with_Adversarial_Feedback
 pip install -r requirements.txt
-````
+```
 
 > Requires **Python 3.10+** and a **24GB+ GPU** (A100/H100 recommended) for full training runs.
 
